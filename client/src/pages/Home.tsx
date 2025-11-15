@@ -15,6 +15,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-serif font-semibold text-foreground" data-testid="text-recent-posts">
             All Posts
           </h2>
+          <div style={{color: 'red', fontWeight: 'bold'}}>DEBUG: Home page rendered</div>
         </div>
 
         <div>
