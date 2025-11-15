@@ -1,54 +1,28 @@
 import { Link } from 'wouter';
-import { Calendar, Clock, User } from 'lucide-react';
-import { Card } from '@/components/ui/card';
 
 interface BlogCardProps {
   id: string;
   title: string;
-  excerpt: string;
-  author: string;
   date: string;
-  readTime: string;
 }
 
 export default function BlogCard({
   id,
   title,
-  excerpt,
-  author,
-  date,
-  readTime
+  date
 }: BlogCardProps) {
   return (
     <Link href={`/post/${id}`} data-testid={`link-blog-${id}`}>
-      <Card className="hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer group h-full flex flex-col">
-        <div className="p-6 flex flex-col flex-1 gap-4">
-          <div className="flex items-center gap-4 text-xs text-muted-foreground uppercase tracking-wide">
-            <div className="flex items-center gap-1.5" data-testid={`text-date-${id}`}>
-              <Calendar className="h-3.5 w-3.5" />
-              <span>{date}</span>
-            </div>
-            <div className="flex items-center gap-1.5" data-testid={`text-readtime-${id}`}>
-              <Clock className="h-3.5 w-3.5" />
-              <span>{readTime}</span>
-            </div>
-          </div>
-
-          <div className="flex-1">
-            <h3 className="text-xl md:text-2xl font-serif font-semibold text-foreground mb-3 leading-tight" data-testid={`text-title-${id}`}>
-              {title}
-            </h3>
-            <p className="text-muted-foreground leading-relaxed" data-testid={`text-excerpt-${id}`}>
-              {excerpt}
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2 text-sm text-muted-foreground pt-2 border-t border-border" data-testid={`text-author-${id}`}>
-            <User className="h-4 w-4" />
-            <span>{author}</span>
-          </div>
+      <div className="hover-elevate active-elevate-2 transition-all duration-200 cursor-pointer group py-6 border-b border-border">
+        <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
+          <h3 className="text-lg md:text-xl font-serif font-semibold text-foreground leading-tight" data-testid={`text-title-${id}`}>
+            {title}
+          </h3>
+          <span className="text-sm text-muted-foreground whitespace-nowrap" data-testid={`text-date-${id}`}>
+            {date}
+          </span>
         </div>
-      </Card>
+      </div>
     </Link>
   );
 }

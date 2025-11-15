@@ -1,7 +1,7 @@
 import { useParams, Link } from 'wouter';
 import { useQuery } from '@tanstack/react-query';
 import { blogPosts } from '@shared/blogData';
-import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function BlogPost() {
@@ -65,23 +65,12 @@ export default function BlogPost() {
         </Link>
 
         <header className="mb-8">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-6 leading-tight" data-testid="text-post-title">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold text-foreground mb-4 leading-tight" data-testid="text-post-title">
             {post.title}
           </h1>
 
-          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground uppercase tracking-wide">
-            <div className="flex items-center gap-2" data-testid="text-post-author">
-              <User className="h-4 w-4" />
-              <span>{post.author}</span>
-            </div>
-            <div className="flex items-center gap-2" data-testid="text-post-date">
-              <Calendar className="h-4 w-4" />
-              <span>{post.date}</span>
-            </div>
-            <div className="flex items-center gap-2" data-testid="text-post-readtime">
-              <Clock className="h-4 w-4" />
-              <span>{post.readTime}</span>
-            </div>
+          <div className="text-sm text-muted-foreground" data-testid="text-post-date">
+            {post.date}
           </div>
         </header>
 
