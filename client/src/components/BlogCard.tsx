@@ -20,7 +20,7 @@ export default function BlogCard({
   readTime
 }: BlogCardProps) {
   return (
-    <Link href={`/blog/${id}`} data-testid={`link-blog-${id}`}>
+    <Link href={`/post/${id}`} data-testid={`link-blog-${id}`}>
       <Card className="hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer group h-full flex flex-col">
         <div className="p-6 flex flex-col flex-1 gap-4">
           <div className="flex items-center gap-4 text-xs text-muted-foreground uppercase tracking-wide">

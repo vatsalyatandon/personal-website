@@ -2,6 +2,7 @@ import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -9,8 +10,7 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/blog', label: 'Blog' }
+    { href: '/about', label: 'About' }
   ];
 
   const isActive = (href: string) => {
@@ -28,7 +28,7 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} data-testid={`link-nav-${link.label.toLowerCase()}`}>
                 <span
@@ -42,9 +42,11 @@ export default function Navigation() {
                 </span>
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"

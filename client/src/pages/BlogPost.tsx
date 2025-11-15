@@ -43,10 +43,10 @@ export default function BlogPost() {
           <h1 className="text-2xl font-serif font-semibold text-foreground mb-4">
             Post not found
           </h1>
-          <Link href="/blog">
+          <Link href="/">
             <Button variant="ghost" className="gap-2" data-testid="button-back-to-blog">
               <ArrowLeft className="h-4 w-4" />
-              Back to Blog
+              Back to Home
             </Button>
           </Link>
         </div>
@@ -57,10 +57,10 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen py-12 md:py-16">
       <article className="max-w-prose mx-auto px-6 lg:px-8">
-        <Link href="/blog">
+        <Link href="/">
           <Button variant="ghost" className="gap-2 mb-8" data-testid="button-back">
             <ArrowLeft className="h-4 w-4" />
-            Back to Blog
+            Back to Home
           </Button>
         </Link>
 
@@ -113,7 +113,7 @@ export default function BlogPost() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
-          <Link href="/blog">
+          <Link href="/">
             <Button variant="ghost" className="gap-2" data-testid="button-back-bottom">
               <ArrowLeft className="h-4 w-4" />
               Back to all posts
