@@ -14,7 +14,6 @@ export interface BlogPost {
   author: string;
   date: string;
   readTime: string;
-  featuredImage: string;
   content: {
     paragraphs: string[];
     images?: { src: string; caption: string; position: number }[];
@@ -29,7 +28,6 @@ export const blogPosts: BlogPost[] = [
     author: 'Sarah Chen',
     date: 'March 15, 2024',
     readTime: '5 min read',
-    featuredImage: workspaceImg,
     content: {
       paragraphs: [
         'In an era of constant digital noise and overwhelming stimuli, the minimalist workspace has emerged as a sanctuary for focused thought and creative production. The philosophy extends beyond mere aesthetics—it\'s about creating an environment that reduces cognitive load and amplifies intentionality.',
@@ -52,7 +50,6 @@ export const blogPosts: BlogPost[] = [
     author: 'Marcus Thompson',
     date: 'March 8, 2024',
     readTime: '7 min read',
-    featuredImage: abstractImg,
     content: {
       paragraphs: [
         'The average knowledge worker toggles between applications over 1,200 times per day. Each context switch carries a cognitive cost, fragmenting attention and diminishing the quality of our thinking. Digital simplification isn\'t about rejection of technology—it\'s about intentional design of our digital environments.',
@@ -76,7 +73,6 @@ export const blogPosts: BlogPost[] = [
     author: 'Sarah Chen',
     date: 'February 28, 2024',
     readTime: '6 min read',
-    featuredImage: mountainImg,
     content: {
       paragraphs: [
         'Intentional living begins with a simple question: Am I choosing this, or is it choosing me? The distinction matters more than we often acknowledge. Default paths—in careers, relationships, daily routines—can lead to perfectly adequate lives. But adequacy isn\'t the same as alignment.',
@@ -99,7 +95,6 @@ export const blogPosts: BlogPost[] = [
     author: 'Marcus Thompson',
     date: 'February 20, 2024',
     readTime: '8 min read',
-    featuredImage: architectureImg,
     content: {
       paragraphs: [
         'Architects understand that space shapes experience. The height of a ceiling influences how we feel in a room. The flow between spaces affects how we move and interact. These same principles apply to the mental architecture we construct for thinking and creating.',

@@ -85,15 +85,6 @@ export default function BlogPost() {
           </div>
         </header>
 
-        <div className="mb-8 md:mb-12">
-          <img
-            src={post.featuredImage}
-            alt={post.title}
-            className="w-full rounded-md"
-            data-testid="img-post-featured"
-          />
-        </div>
-
         <div className="prose prose-lg max-w-none">
           {post.content.paragraphs.map((paragraph, index) => {
             const contentImage = post.content.images?.find(img => img.position === index);

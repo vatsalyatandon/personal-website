@@ -1,5 +1,4 @@
 import BlogCard from '../BlogCard';
-import workspaceImg from '@assets/generated_images/Clean_workspace_desk_scene_f67ba356.png';
 
 export default function BlogCardExample() {
   return (
@@ -11,7 +10,6 @@ export default function BlogCardExample() {
         author="Sarah Chen"
         date="March 15, 2024"
         readTime="5 min read"
-        featuredImage={workspaceImg}
       />
     </div>
   );

@@ -9,7 +9,6 @@ interface BlogCardProps {
   author: string;
   date: string;
   readTime: string;
-  featuredImage: string;
 }
 
 export default function BlogCard({
@@ -18,21 +17,11 @@ export default function BlogCard({
   excerpt,
   author,
   date,
-  readTime,
-  featuredImage
+  readTime
 }: BlogCardProps) {
   return (
     <Link href={`/blog/${id}`} data-testid={`link-blog-${id}`}>
-      <Card className="overflow-hidden hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer group h-full flex flex-col">
-        <div className="aspect-video overflow-hidden">
-          <img
-            src={featuredImage}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            data-testid={`img-blog-${id}`}
-          />
-        </div>
-
+      <Card className="hover-elevate active-elevate-2 transition-all duration-300 cursor-pointer group h-full flex flex-col">
         <div className="p-6 flex flex-col flex-1 gap-4">
           <div className="flex items-center gap-4 text-xs text-muted-foreground uppercase tracking-wide">
             <div className="flex items-center gap-1.5" data-testid={`text-date-${id}`}>
